@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../core/theme/app_spacing.dart';
 
 /// Campo de texto com rótulo acima, como no wireframe.
@@ -18,6 +17,7 @@ class AppTextField extends StatelessWidget {
     this.textInputAction,
     this.validator,
     this.onChanged,
+    this.onFieldsubmitted,
     super.key,
   });
 
@@ -31,6 +31,7 @@ class AppTextField extends StatelessWidget {
   final TextInputAction? textInputAction;
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
+  final void Function(String)? onFieldsubmitted;
 
   @override
   Widget build(BuildContext context) {
